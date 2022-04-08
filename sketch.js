@@ -78,7 +78,8 @@ function draw() {
       ball.display();
       if(ball.body.position.y>760){
         if(ball.body.position.x > 301){
-          if(ball.body.position.x < 600){
+         // if(ball.body.position.x < 600){ Le cambié el límite, para ajustarlo a la barra
+          if(ball.body.position.x < 580){     
             score=score+100;
             ball=null;
             if(count>=5) gameState="end";
@@ -88,10 +89,11 @@ function draw() {
     } 
     if(ball!=null){
       ball.display();
-      if(ball.body.position.y>760){
-        if(ball.body.position.x > 601){
+      if(ball.body.position.y>761){
+        if(ball.body.position.x > 581){   // Tambipen se actualizó el límite
           if(ball.body.position.x < 900){
-            score=score+100;
+           // score=score+100;  Le cambié la cantidad a incrementar
+            score=score+200;
             ball=null;
             if(count>=5) gameState="end";
           }
